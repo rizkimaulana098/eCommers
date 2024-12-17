@@ -15,8 +15,8 @@ export async function POST(request: NextRequest) {
         await connectMongoDB()
 
         const data = await Product.create({
-            imgSrc, fileKey, name, category, price
-        })
+            imgSrc, fileKey, name, category, price,
+        });
         return NextResponse.json({msg: "Product added Successfully", data}); 
     } catch (error) {
         return  NextResponse.json({

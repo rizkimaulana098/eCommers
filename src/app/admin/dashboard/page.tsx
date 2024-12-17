@@ -56,8 +56,7 @@ const Dashboard = () => {
               </tr>
             </thead>
             <tbody>
-              {
-                products.map((product: IProduct, index) => (
+              { products.map((product: IProduct, index) => (
                 <ProductRow key={product._id}
                   srNo={index + 1}
                   setOpenPopup={setOpenPopup}

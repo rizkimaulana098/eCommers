@@ -36,7 +36,9 @@ const ProductForm = () => {
 
         Dispatch(setloading(true));
 
-        axios.post("/api/add_product", payload).then(res => {
+        axios
+        .post("/api/add_product", payload) 
+        .then(res => {
             makeToast("Product added successfully");
             setPayload({
                 imgSrc: null,
@@ -53,7 +55,7 @@ const ProductForm = () => {
   return (
   <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
     <Image className="max-h-[300px] w-auto object-contain rounded-md" 
-    src={payload.imgSrc ? payload.imgSrc : "/logo.jpg"} 
+    src={payload.imgSrc ? payload.imgSrc : "/masukanimg.jpg"} 
     width={800}
     height={500}
     alt="product_image"
@@ -103,7 +105,9 @@ const ProductForm = () => {
             required
             />
         </div>
-        
+        <div className="flex justify-end">
+            <button className="bg-pink text-white px-8 py-2 rounded-md">Add</button>
+        </div>
   </form>
   );
 };

@@ -24,25 +24,25 @@ const [inputData, setInputData] = useState({
 
 const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    dispacth(setloading(true))
+    dispacth(setloading(true));
 
     axios
     .put('/api/edit_product/${productData._id}', inputData)
     .then(res => {
-        makeToast("Product Update Successfully!")
-        setUpdateTable((prevState) => !prevState)
+        makeToast("Product Update Successfully!");
+        setUpdateTable((prevState) => !prevState);
     })
     .catch(err => console.log(err))
     .finally(() => {
-        dispacth(setloading(false))
-        setOpenPopup(false)
-    });
+        dispacth(setloading(false));
+        setOpenPopup(false);
+    }); 
 };
 
 
   return (
   <div className="fixed top-0 left-0 w-full h-screen bg-[#00000070] grid place-items-center">
-    <div className="bg-white w-[700px] py-8 rounded-lg text-cecnter relative">
+    <div className="bg-white w-[700px] py-8 rounded-lg text-center relative">
         <IoIosCloseCircleOutline
             className="absolute text-2x1 right-0 top-0 m-4 cursor-pointer hover:text-red-600"
             onClick={() => setOpenPopup(false)}
