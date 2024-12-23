@@ -54,9 +54,6 @@ const Navbar = ({ setShowCart }: PropsType) => {
 
 
 
-{/* 
-                     */}
-
 
 
 export default Navbar
