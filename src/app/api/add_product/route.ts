@@ -3,11 +3,11 @@ import Product from "@/libs/models/Product";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
-    try{
+    try {
 
 
         const body = await request.json()
-        const {imgSrc, fileKey, name, category, price} = body;
+        const { imgSrc, fileKey, name, category, price } = body;
 
 
 
@@ -17,13 +17,13 @@ export async function POST(request: NextRequest) {
         const data = await Product.create({
             imgSrc, fileKey, name, category, price,
         });
-        return NextResponse.json({msg: "Product added Successfully", data}); 
+        return NextResponse.json({ msg: "Product added Successfully", data });
     } catch (error) {
-        return  NextResponse.json({
+        return NextResponse.json({
             error,
             msg: "Something went Wrong"
         },
-        {status: 400 }
+            { status: 400 }
         );
     }
 }

@@ -47,7 +47,7 @@ const Sidebar = () => {
         <div className="bg-white w-[300px] min-h-screen p-4 shrink-0">
             <div className="flex items-center gap-4">
                 <img className="size-12 rounded-lg" src="/logo.gif" alt="logo" />
-                <h2 className="text-[20px] font-semibold">The Brave Coders</h2>
+                <h2 className="text-[20px] font-semibold">TUKU.COM</h2>
             </div>
 
 
